@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who Dat?</title>
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Outline|Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- MAIN BEGINS -->
+  <main>
+
+    <h6 class="score">0</h6>
+    <!-- INTRO PAGE SECTION BEGINS -->
+    <section class="introPage">
+      <div class="backdrop">
+        <h1 class="text">Who Dat?</h1>
+      </div>
+      <h2>So you think you know music.
+        <span>Pick your favourite genre and prove it.</span>
+      </h2>
+      <div class="playForm">
+        <form action="" class="game-options">
+          <!-- <label for="artist">Artist Name</label>
+            <input type="text" id="artist"> -->
+          <label for="genre" class="hidden custom-select">Genre</label>
+          <select name="genre" id="genre">
+            <option value="">Choose genre</option>
+            <option value="Top 100">Top 100</option>
+          </select>
+          <input type="submit" value="Play">
+        </form>
+      </div>
+    </section>
+    <!-- END OF INTRO PAGE SECTION -->
+    <section class="gamePage">
+      <div class="timer"></div>
+      <div class="lyricsWrapper">
+        <h3>Who dis?</h3>
+        <div class="lyrics">
+          <!-- Lyrics will be appended here -->
+        </div>
+      </div>
+      <div class="selection">
+        <!-- <button class="answers">Artist</button> -->
+        <!-- Artist options appened here -->
+      </div>
+    </section>
+    <section class="feedback">
+      <h2></h2>
+      <div class="feedbackContent">
+        <img src="" class="giphy" alt="randomized giphy for artist">
+        <h3 class="artistName">
+          <!-- Correct artist name -->
+        </h3>
+        <h3 class="trackName">
+          <!-- Correct Track name -->
+        </h3>
+      </div>
+
+    </section>
+    <section class="winnerSection">
+      <div class="win">
+        <h4>You win!</h4>
+        <img src="./styles/images/rocky.gif" alt="">
+        <button class="resetButton">
+          <a href="">Reset</a>
+        </button>
+      </div>
+    </section>
+    <section class="loserSection">
+      <div class="lose">
+        <h4>You lose!</h4>
+        <img src="./styles/images/tswift.gif" alt="">
+        <button class="resetButton">
+          <a href="">Reset</a>
+        </button>
+      </div>
+    </section>
+  </main>
+  <!-- MAIN ENDS -->
+  <!-- <footer>
+  <p> &copy; 2018 Roberto Meech & Avi Craimer</p>
+</footer> -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

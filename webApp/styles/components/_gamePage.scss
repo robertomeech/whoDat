@@ -1,0 +1,40 @@
+.gamePage {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.lyricsWrapper {
+    text-align: center;
+    background: $secondaryColor;
+    .lyrics {
+        width: 85%;
+        line-height: 1.75;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+}
+
+.selection {
+    background: $secondaryColor;
+    padding: 25px;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+
+@media(max-width: 1160px) {
+    .selection {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+@media(max-width: 650px) {
+    .gamePage {
+        width: 100%;
+    }
+}

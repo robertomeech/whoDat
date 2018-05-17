@@ -1,0 +1,75 @@
+.winnerSection{
+    width: 80%;
+    margin: 0 auto;
+    // display: flex;
+    justify-content: center;
+    .win {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    h4 {
+            position: absolute;
+            z-index: 10;
+            color: white;
+    }
+    }
+    img {
+        position: relative;
+        width: 100%;
+        display: block;
+        border: 15px groove $primaryColor;
+    }
+    .resetButton {
+        position: absolute;
+        bottom: 50px;
+        width: 200px;
+        height: 50px;
+        font-family: $accentFont;
+        font-size: 3rem;
+        border: none;
+    }
+}
+
+// LOSER SECTION STYLES
+
+.loserSection {
+    width: 80%;
+    margin: 0 auto;
+    // display: flex;
+    justify-content: center;
+    .lose {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        h4 {
+            position: absolute;
+            z-index: 10;
+            color: white;
+        }
+        img {
+            position: relative;
+            width: 100%;
+            display: block;
+            border: 15px groove $secondaryColor;
+        }
+         .resetButton {
+        position: absolute;
+        bottom: 50px;
+        width: 200px;
+        height: 50px;
+        font-family: $accentFont;
+        font-size: 3rem;
+        border: none;
+    }
+    }
+}
+
+.resetButton a {
+    text-decoration: none;
+    color: $primaryColor;
+    text-transform: uppercase;
+}
