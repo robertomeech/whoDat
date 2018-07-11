@@ -199,7 +199,8 @@ section {
   color: white;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  margin-top: 10px; }
   .button1:hover {
     background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
     background: -webkit-linear-gradient(left, #fc5c7d, #6a82fb);
@@ -244,7 +245,7 @@ h3 {
 
 h4 {
   font-family: "Roboto", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
@@ -516,7 +517,7 @@ footer {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     margin: 0 auto; }
     .winnerSection .win h4 {
       position: absolute;
@@ -525,10 +526,6 @@ footer {
       color: white;
       text-align: center;
       margin: 0; }
-  .winnerSection img {
-    position: relative;
-    width: 100%;
-    display: block; }
   .winnerSection .resetButton {
     position: absolute;
     bottom: 75px;
@@ -562,37 +559,49 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    min-height: 100vh; }
     .loserSection .lose h4 {
-      position: absolute;
+      position: relative;
       z-index: 10;
       color: white;
-      text-align: center; }
-    .loserSection .lose img {
-      position: relative;
-      width: 100%;
-      display: block; }
-    .loserSection .lose .resetButton {
-      position: absolute;
-      bottom: 50px;
-      width: 175px;
-      height: 60px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 3rem;
-      border: none;
-      color: white;
-      background: #64dce5; }
-      .loserSection .lose .resetButton:hover {
-        background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
-        background: -webkit-linear-gradient(left, #fc5c7d, #6a82fb);
-        background: -o-linear-gradient(left, #fc5c7d, #6a82fb);
-        background: linear-gradient(to right, #fc5c7d, #6a82fb);
-        color: white; }
+      text-align: center;
+      top: 10%;
+      width: 60%;
+      -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+      transform: translateY(-30%);
+      color: black;
+      background: white;
+      -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+      padding: 2.5%; }
+  .loserSection .resetButton {
+    position: absolute;
+    bottom: 50px;
+    width: 175px;
+    height: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    border: none;
+    color: white;
+    background: #64dce5; }
+    .loserSection .resetButton:hover {
+      background: -webkit-gradient(linear, left top, right top, from(#fc5c7d), to(#6a82fb));
+      background: -webkit-linear-gradient(left, #fc5c7d, #6a82fb);
+      background: -o-linear-gradient(left, #fc5c7d, #6a82fb);
+      background: linear-gradient(to right, #fc5c7d, #6a82fb);
+      color: white; }
 
 .resetButton a {
   text-decoration: none;
   color: black;
   text-transform: uppercase; }
+
+@media (max-width: 685px) {
+  .loserSection .lose h4 {
+    font-size: 2rem; } }
 
 .feedback {
   margin: 0 auto;

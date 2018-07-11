@@ -11,7 +11,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        position: absolute;
+        position: relative;
         margin: 0 auto;
     h4 {
             position: absolute;
@@ -22,11 +22,7 @@
             margin: 0;
     }
     }
-    img {
-        position: relative;
-        width: 100%;
-        display: block;
-    }
+
     .resetButton {
         position: absolute;
         bottom: 75px;
@@ -59,16 +55,22 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        position: relative;
+        min-height: 100vh;
         h4 {
-            position: absolute;
+            position: relative;
             z-index: 10;
             color: white;
             text-align: center;
+            top: 10%;
+            width: 60%;
+            transform: translateY(-30%);
+            color: black;
+            background: white;
+            box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+            padding: 2.5%;
         }
-        img {
-            position: relative;
-            width: 100%;
-            display: block;
+
         }
          .resetButton {
         position: absolute;
@@ -88,10 +90,16 @@
         }
     }
     }
-}
+
 
 .resetButton a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
 }
+
+ @media(max-width: 685px) {
+    .loserSection .lose h4 {
+        font-size: 2rem;
+        }
+    }
