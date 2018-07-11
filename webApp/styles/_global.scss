@@ -1,5 +1,5 @@
 main {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -29,16 +29,15 @@ section {
     }
 
 .button1 {
-    width: 200px;
-    height: 75px;
+    width: 175px;
+    height: 60px;
     border: none;
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
-    font-size: 2rem;
+    background: linear-gradient(to top, #fc5c7d, $primaryColor);
+    font-size: 1.85rem;
     font-family: $accentFont;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: white;
-    transition: all 0.4s ease;
-    margin-top: 25px;
+    transition: all 0.4s ease; 
 
     &:hover {
             background: linear-gradient(to right, #fc5c7d, #6a82fb);
@@ -47,9 +46,14 @@ section {
 
     @media(max-width: 1160px) {
 
+        margin: 15px 0;
+        width: 300px;
+    }
+    @media(max-width: 600px) {
 
-        margin: 15px;
-        width: 350px;
+        height: 40px;
+        font-size: 1.8rem;
+        width: 100%;
     }
 
 }

@@ -1,15 +1,24 @@
 .feedback {
     margin: 0 auto;
     width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(.../../images/musicnotes.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 70px;
 
-    background: $primaryColor;
+    h3 {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+    }
+
+
     h2 {
-        color: $secondaryColor;
+        color: $primaryColor;
     }
     img {
         margin: 20px 0;
-        width: 100%;
-        max-height: 400px;
+        width: 50%;
+        max-height: 250px;
     }
 
     &Content {
@@ -25,5 +34,16 @@
             width: 60%;
         }
     }
+}
+
+
+@media (max-width: 650px ) {
+    button.nextQuestion.button1 {
+        width: 200px;
+    }
+    button.getScore.button1 {
+        width: 200px;
+    }
+
 }
 

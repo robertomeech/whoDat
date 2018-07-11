@@ -1,75 +1,97 @@
 .winnerSection{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    // display: flex;
     justify-content: center;
+    background: url(.../../images/musicnotes.jpg);
+    background-position: center;
+    background-size: cover;
+    display: relative;
     .win {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        position: relative;
+        position: absolute;
+        margin: 0 auto;
     h4 {
             position: absolute;
+            top: 40%;
             z-index: 10;
             color: white;
+            text-align: center;
+            margin: 0;
     }
     }
     img {
         position: relative;
         width: 100%;
         display: block;
-        border: 15px groove $primaryColor;
     }
     .resetButton {
         position: absolute;
-        bottom: 50px;
-        width: 200px;
-        height: 50px;
+        bottom: 75px;
+        width: 175px;
+        height: 60px;
         font-family: $accentFont;
         font-size: 3rem;
         border: none;
+        background: $primaryColor;
+
+        &:hover {
+            background: linear-gradient(to right, #fc5c7d, #6a82fb);
+            color:white;
+
+        }
     }
 }
 
 // LOSER SECTION STYLES
 
 .loserSection {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    // display: flex;
-    justify-content: center;
+    background: url(.../../images/musicnotes.jpg);
+    background-position: center;
+    background-size: cover;
+    display: relative;
     .lose {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        position: relative;
         h4 {
             position: absolute;
             z-index: 10;
             color: white;
+            text-align: center;
         }
         img {
             position: relative;
             width: 100%;
             display: block;
-            border: 15px groove $secondaryColor;
         }
          .resetButton {
         position: absolute;
         bottom: 50px;
-        width: 200px;
-        height: 50px;
+        width: 175px;
+        height: 60px;
         font-family: $accentFont;
         font-size: 3rem;
         border: none;
+        color: white;
+        background: $primaryColor;
+
+        &:hover {
+            background: linear-gradient(to right, #fc5c7d, #6a82fb);
+            color:white;
+
+        }
     }
     }
 }
 
 .resetButton a {
     text-decoration: none;
-    color: $primaryColor;
+    color: black;
     text-transform: uppercase;
 }

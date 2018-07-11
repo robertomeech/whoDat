@@ -3,7 +3,6 @@ app = {};
 
 app.genres = {
 
-    "Pop": 'pop',
     "Hip Hop/Rap": 'hip-hop' ,
     "Alternative": 'alternative',
     "Country": 'country'
@@ -503,7 +502,7 @@ app.handleAnswer = function (e) {
         } else {
             console.log("ELSE STATEMENT TRIGGERED BY WRONG ANSWER");
             $('.feedback h2').text("WRONG");
-            $('.feedbackContent').prepend( `<h3 class=".theCorrectAnswerIs" >The correct answer is:</h3>` ) ;
+            $('.feedbackContent').prepend( `<h3 class="theCorrectAnswerIs">The correct answer is:</h3>` ) ;
 
         }
 
@@ -512,7 +511,7 @@ app.handleAnswer = function (e) {
             //We are on the last question
             $('.feedback .trackName').after(`<button class="getScore button1">Get Score</button>`);
         } else {
-            $('.feedback .trackName').after(`<button class="nextQuestion button1">Next Question >></button>`);
+            $('.feedback .trackName').after(`<button class="nextQuestion button1">Next Question</button>`);
         }
 
 
@@ -532,10 +531,10 @@ app.getScore = function (e) {
     $('.feedback').fadeOut();
     scorePercentage =   Math.floor(app.score /  app.numberOfQuestions * 100);
     if (scorePercentage > 50) {
-        $('.winnerSection h4').text(`Your got ${scorePercentage}% correct, way to go!`);
+        $('.winnerSection h4').text(`You got ${scorePercentage}% correct! You're a music genius!`);
         $('.winnerSection').fadeIn();
     } else {
-        $('.loserSection h4').text(`You only got ${scorePercentage}% correct`);
+        $('.loserSection h4').text(`You only got ${scorePercentage}% correct. Hold that L or try again!`);
         $('.loserSection').fadeIn();
     }
 
@@ -548,11 +547,11 @@ app.backgroundOnSelect = function (e) {
 
     if (genre === 'Top 100') {
 
-        $('.introPage').removeClass('top100 pop alternative hip-hop country').addClass('top100');
+        $('.introPage').removeClass('top100 alternative hip-hop country').addClass('top100');
 
 
     } else {
-        $('.introPage').removeClass('top100 pop alternative hip-hop country').addClass(app.genres[genre]);
+        $('.introPage').removeClass('top100 alternative hip-hop country').addClass(app.genres[genre]);
     }
 
 
@@ -568,7 +567,7 @@ $(function(){
     $('.introPage').show();
     app.addGenreOptions();
 
-
+    $('.score').hide();
 
     app.tracksPromise = app.musixRequest()
         .then( function (sortedTrackInfo){
@@ -584,6 +583,7 @@ $(function(){
 
         $('.introPage').fadeOut();
         $('.gamePage').fadeIn();
+        $('.score').show();
 
 
         const genreSelected = $('#genre').val();

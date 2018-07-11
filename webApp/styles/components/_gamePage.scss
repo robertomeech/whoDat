@@ -1,40 +1,120 @@
 .gamePage {
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    padding-top: 110px;
+    min-height: 100vh;
+    background: url(.../../images/musicnotes.jpg);
+    background-position: center;
+    background-size: cover;
+    h3 {
+         color: black;
+         background: white;
+         display: inline-block;
+         padding-top: 0;
+         width: 60%;
+    }
+
 }
 
 .lyricsWrapper {
     text-align: center;
-    background: $secondaryColor;
     .lyrics {
-        width: 85%;
+        width: 60%;
         line-height: 1.75;
         margin: 0 auto;
-        padding-bottom: 15px;
+        padding-bottom: 7.5px;
+        padding-top: 7.5px;
         text-align: center;
+        background: white;
+        box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
     }
 }
 
 .selection {
-    background: $secondaryColor;
-    padding: 25px;
+    background: transparent;
+    width: 60%;
     justify-content: space-between;
     display: flex;
+    margin: 0 auto;
 
 }
 
 
 @media(max-width: 1160px) {
     .selection {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
+        width: 70%;
+
+    }
+    .lyricsWrapper .lyrics {
+        width: 70%;
+        p {
+            font-size: 2.3rem;
+        }
+    }
+
+    .gamePage h3 {
+        width: 70%;
+        font-size: 5rem;
+    }
+}
+
+@media(max-width: 1085px) {
+
+    .selection {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 70%;
 
     }
 }
 
+
+@media(max-width: 890px) {
+    .lyricsWrapper .lyrics {
+        width: 95%;
+ }
+
+    .selection {
+        width: 95%;
+    }
+
+     .gamePage h3 {
+        width: 95%;
+        font-size: 5rem;
+    }
+
+
+
+
 @media(max-width: 650px) {
     .gamePage {
-        width: 100%;
+        padding-top: 70px;
     }
+    .selection {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 70%;
+
+    }
+    .lyricsWrapper .lyrics p{
+       font-size: 2rem;
+ }
+
+}
+@media(max-width: 600px) {
+    .gamePage {
+        padding-top: 100px;
+    }
+}
+
+@media(max-width: 460px) {
+    .gamePage {
+        padding-top: 50px;
+    }
+}
 }

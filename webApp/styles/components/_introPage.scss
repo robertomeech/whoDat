@@ -4,6 +4,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 50px;
+    padding-top: 160px;
     &.top100 {
         background:linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/joseph-pearson-411277-unsplash-top100.jpg );
         background-size: cover;
@@ -30,11 +31,13 @@
     }
 
 
+
 }
+
 
 .text {
     text-align: center;
-    color: #8884ff;
+    color: $primaryColor;
     margin: 0;
     line-height: 1;
 }
@@ -45,35 +48,35 @@
     flex-direction: column;
     select {
         width: 200px;
-        height: 75px;
+        height: 60px;
         margin: 10px 0;
         text-transform: capitalize;
         font-family: $accentFont;
-        letter-spacing: 1.1px;
         font-size: 1.8rem;
         text-transform: uppercase;
+        letter-spacing: 1.5px;
         font-weight: bold;
         padding: 10px;
-        color: $primaryColor;
+        color: black;
         appearance: none;
+        cursor:pointer;
         border: none;
         text-align: center;
         transition: all 0.4s ease;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.315);
          &:hover {
             background-color: $secondaryColor;
         }
     }
     input {
         width: 200px;
-        height: 75px;
+        height: 60px;
         margin: 2.5% 0;
         text-transform: uppercase;
+        letter-spacing: 1.5px;
         font-family: $baseFont;
         font-size: 3rem;
         font-weight: bold;
-        letter-spacing: 10px;
-        padding: 10px;
+        padding: 10px;        
         background-color: $primaryColor;
         border: none;
         color: black;
@@ -94,13 +97,18 @@
 
 @media(max-width: 900px) {
     h2 {
-        width: 80%;
+        width: 90%;
     }
 }
 
-@media(max-width: 650px) {
-    .introPage {
-        width: 100%;
+@media(max-width: 740px) {
+    h1 {
+        font-size: 9rem;
     }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
 }
 
