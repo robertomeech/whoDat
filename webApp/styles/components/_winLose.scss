@@ -1,7 +1,6 @@
 .winnerSection{
     width: 100%;
     margin: 0 auto;
-    justify-content: center;
     background: url(.../../images/musicnotes.jpg);
     background-position: center;
     background-size: cover;
@@ -12,25 +11,31 @@
         align-items: center;
         width: 100%;
         position: relative;
-        margin: 0 auto;
+        min-height: 100vh;
     h4 {
-            position: absolute;
-            top: 40%;
-            z-index: 10;
-            color: white;
-            text-align: center;
-            margin: 0;
+        position: relative;
+        z-index: 10;
+        color: white;
+        text-align: center;
+        top: 10%;
+        width: 60%;
+        transform: translateY(-30%);
+        color: black;
+        background: white;
+        box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+        padding: 2.5%;
     }
     }
 
     .resetButton {
         position: absolute;
-        bottom: 75px;
+        bottom: 50px;
         width: 175px;
         height: 60px;
         font-family: $accentFont;
         font-size: 3rem;
         border: none;
+        color: white;
         background: $primaryColor;
 
         &:hover {
